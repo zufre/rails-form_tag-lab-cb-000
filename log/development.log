@@ -282,3 +282,32 @@ Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-20 15:37:32 -0600
+
+
+Started GET "/students" for ::1 at 2015-11-21 14:48:59 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 161ms (Views: 153.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/new" for ::1 at 2015-11-21 14:49:01 -0600
+Processing by StudentsController#new as HTML
+  Rendered students/_form.html.erb (0.7ms)
+  Rendered students/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2015-11-21 14:49:05 -0600
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dlRHbo6425m6GQYA7t8DkC6uyEe5VNQ3jhbI7wrgOkJRRdPqya8zzH1tTVm+p4+0xVzr5ToJ+SZqVo0KO1SluA==", "first_name"=>"asdf", "last_name"=>"zxcvzx", "commit"=>"Submit Student"}
+Redirected to http://localhost:3000/students/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for ::1 at 2015-11-21 14:49:05 -0600
+Processing by StudentsController#new as HTML
+  Rendered students/_form.html.erb (0.3ms)
+  Rendered students/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
